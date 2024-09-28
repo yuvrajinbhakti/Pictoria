@@ -66,7 +66,7 @@ const Author = styled.div`
 const ImageCard = ({ item }) => {
   return (
     <Card>
-      <LazyLoadImage style={{borderRadius: '12px'}} width="100%" src={item?.photo} />
+      <LazyLoadImage alt={item?.prompt} style={{borderRadius: '12px'}} width="100%" src={item?.photo} />
       <HoverOverlay>
         <div
           style={{
