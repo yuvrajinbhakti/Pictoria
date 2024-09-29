@@ -59,7 +59,7 @@ const GenerateImageForm = () => {
        <TextInput label="Author" placeholder="Enter your name..." name="name" />
 
        <TextInput label="Prompt" placeholder="Write a detailed prompt about the image . . . " name="name" rows="8" textArea />
-** You can post the AI Generated Image to the Community **
+** You can post the AI Generated Image to the Community ** 
       </Body>
       <Actions>
         <Button text="Generate Image" flex leftIcon={<AutoAwesome/>} />
