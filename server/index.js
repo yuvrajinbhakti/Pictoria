@@ -3,6 +3,7 @@ import express from "express";
 import mongoose from "mongoose";
 import * as dotenv from "dotenv";
 import PostRouter from "./routes/Posts.js";
+import GenerateImageRouter from "./routes/GenerateImage.js";
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ return res.status(status).json({
 });
 
 app.use("/api/post",PostRouter);
+app.use("/api/generateImage",GenerateImageRouter);
 
 //Default get
 app.get("/",async (req,res)=>{

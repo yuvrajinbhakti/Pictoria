@@ -26,11 +26,11 @@ next(createError(error.status,error?.response?.data?.error?.message || error?.me
 export const createPost=async (req,res,next)=>{
 try {
     const {name,prompt,photo}=req.body;
-    const photoUrl="";
+    const photoUrl=await cloudinary.uploader.upload(photo) ;
     const newPost=await Post.create({
         name,
         prompt,
-        photo: photoUrl,
+        photo: photoUrl?.secure_url,
     });
     return res.status(201).json({success:true,data:newPost})
 } catch (error) {
